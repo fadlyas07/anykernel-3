@@ -191,19 +191,11 @@ if [ $? != 0 -o -z "$(ls bin)" ]; then
   abort "Busybox setup failed. Aborting...";
 fi;
 
-if [ -f banner ]; then
-  ui_printfile banner;
-  ui_print " " " ";
-fi;
-
-kernel_string="$(file_getprop anykernel.sh kernel.string)";
-ui_print "$kernel_string";
-if [ -f version ]; then
-  ui_print " ";
-  ui_printfile version;
-  ui_print " ";
-fi;
-ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " " " ";
+ui_print "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★";
+ui_print "★ $(file_getprop anykernel.sh kernel.string)";
+ui_print "★ GREENFORCE For Xiaomi Redmi 4A & 5A ";
+ui_print "★ 		SINCE AT 2019		 ";
+ui_print "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★";
 
 $BOOTMODE || $bb mount -o bind /dev/urandom /dev/random;
 umount_all;
@@ -257,7 +249,7 @@ elif [ ! "$(getprop ro.build.type 2>/dev/null)" ]; then
 fi;
 
 if [ "$(file_getprop anykernel.sh do.devicecheck)" == 1 ]; then
-  ui_print "Checking device...";
+  ui_print " " "Checking device...";
   device=$(getprop ro.product.device 2>/dev/null);
   product=$(getprop ro.build.product 2>/dev/null);
   vendordevice=$(getprop ro.product.vendor.device 2>/dev/null);
@@ -265,14 +257,14 @@ if [ "$(file_getprop anykernel.sh do.devicecheck)" == 1 ]; then
   for testname in $(file_getprop anykernel.sh 'device.name.*'); do
     for devicename in $device $product $vendordevice $vendorproduct; do
       if [ "$devicename" == "$testname" ]; then
-        ui_print "$testname" " ";
+        ui_print "- $testname" " ";
         match=1;
         break 2;
       fi;
     done;
   done;
   if [ ! "$match" ]; then
-    abort " " "Unsupported device. Aborting...";
+    abort "Oof! Unsupported device. Aborting...";
   fi;
 fi;
 
@@ -324,7 +316,7 @@ if [ "$supported_lvl" ]; then
   fi;
 fi;
 
-ui_print "Installing...";
+ui_print "- Installing...";
 core=$($bb grep -oE 'ak.*core.sh' anykernel.sh);
 test -f tools/$core || $bb ln -s $home/tools/ak*-core.sh $home/tools/$core;
 PATH="$home/bin:$PATH" home=$home $bb ash anykernel.sh $2;
@@ -390,4 +382,6 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
 
-ui_print " " " " "Done!";
+ui_print "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★";
+ui_print " 		 ENJ★Y *_*		 ";
+ui_print "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★";
