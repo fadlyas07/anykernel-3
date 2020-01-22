@@ -191,11 +191,11 @@ if [ $? != 0 -o -z "$(ls bin)" ]; then
   abort "Busybox setup failed. Aborting...";
 fi;
 
-ui_print "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★";
-ui_print "★ $(file_getprop anykernel.sh kernel.string)";
-ui_print "★ GREENFORCE For Xiaomi Redmi 4A & 5A ";
-ui_print "★ 		SINCE AT 2019		 ";
-ui_print "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★";
+ui_print "================================";
+ui_print "= $(file_getprop anykernel.sh kernel.string)";
+ui_print "= GREENFORCE For Xiaomi Redmi 4A & 5A ";
+ui_print "= 		SINCE AT 2019		 ";
+ui_print "================================";
 
 $BOOTMODE || $bb mount -o bind /dev/urandom /dev/random;
 umount_all;
@@ -382,6 +382,4 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
 
-ui_print "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★";
-ui_print " 		 ENJ★Y *_*		 ";
-ui_print "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★";
+ui_print " done! ";

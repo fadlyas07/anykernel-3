@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=GREENFORCE-FAMILY kernel by @Mhmmdfas
+kernel.string=Hoi Bro!
 do.devicecheck=1
 do.modules=0
 do.systemless=0
