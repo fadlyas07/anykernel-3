@@ -14,6 +14,8 @@ device.name1=rolex
 device.name2=redmi4a
 device.name3=riva
 device.name4=redmi5a
+device.name5=vince
+device.name6=redmi5plus
 supported.versions=
 supported.patchlevels=
 '; } # end properties
