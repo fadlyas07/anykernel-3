@@ -16,6 +16,8 @@ device.name3=riva
 device.name4=redmi5a
 device.name5=vince
 device.name6=redmi5plus
+device.name7=lavender
+device.name8=redminote7
 supported.versions=
 supported.patchlevels=
 '; } # end properties
