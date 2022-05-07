@@ -499,4 +499,14 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
   cleanup;
 fi;
 
-ui_print " " " " "Done!";
+ui_print "Done!";
+sleep 5;
+
+ui_print "Error
+ .Installation_Aborted_Error_7
+ .Formating_System_Data_Vendor
+ .No_system_operating
+ .Error
+ .Error
+ .but_lie
+ .lol :p";
