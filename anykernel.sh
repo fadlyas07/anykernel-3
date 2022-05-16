@@ -5,7 +5,7 @@
 # begin properties
 properties() { '
 kernel.string=Hi there!
-do.devicecheck=1
+do.devicecheck=0
 do.modules=0
 do.systemless=1
 do.cleanup=1
@@ -35,13 +35,31 @@ patch_vbmeta_flag=auto;
 set_perm_recursive 0 0 755 644 $ramdisk/*;
 set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 
+# Messages
+ui_print "                  ____ _____                 ";
+ui_print "                 / ___|  ___|                ";
+ui_print "                | |  _| |                    ";
+ui_print "                | |_| |  _|                  ";
+ui_print "                 \____|_|                    ";
+ui_print "   ____  ____   ___      _ _____ ____ _____  ";
+ui_print "  |  _ \|  _ \ / _ \    | | ____/ ___|_   _| ";
+ui_print "  | |_) | |_) | | | |_  | |  _|| |     | |   ";
+ui_print "  |  __/|  _ <| |_| | |_| | |__| |___  | |   ";
+ui_print "  |_|   |_| \_\\___/ \___/|_____\____| |_|   ";
+ui_print "                 since 2020                  ";
+ui_print "     - -             - -             - -     ";
+ui_print "              Muhammad Fadlyas               ";
+ui_print "                      x                      ";
+ui_print "                 Zecho Satria                ";
+ui_print "     - -             - -             - -     ";
+ui_print "            May soon be abandoned            ";
+
+sleep 1
+ui_print "                                             ";
+#paste_here
+
 ## AnyKernel boot install
 dump_boot;
 
-# Messages
-ui_print "3"
-ui_print "2"
-ui_print "1"
-
-write_boot;
 ## end boot install
+write_boot;
