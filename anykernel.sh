@@ -5,7 +5,7 @@
 # begin properties
 properties() { '
 kernel.string=Hi there!
-do.devicecheck=0
+do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
@@ -47,16 +47,15 @@ ui_print "  | |_) | |_) | | | |_  | |  _|| |     | |   ";
 ui_print "  |  __/|  _ <| |_| | |_| | |__| |___  | |   ";
 ui_print "  |_|   |_| \_\\___/ \___/|_____\____| |_|   ";
 ui_print "                 since 2020                  ";
-ui_print "     - -             - -             - -     ";
-ui_print "              Muhammad Fadlyas               ";
+ui_print "                     - -                     ";
+ui_print "               Muhammad Fadlyas              ";
 ui_print "                      x                      ";
 ui_print "                 Zecho Satria                ";
-ui_print "     - -             - -             - -     ";
+ui_print "                     - -                     ";
 ui_print "            May soon be abandoned            ";
 
 sleep 1
-ui_print "                                             ";
-#paste_here
+ui_print ""
 
 ## AnyKernel boot install
 dump_boot;
